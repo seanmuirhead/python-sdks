@@ -1,6 +1,6 @@
 import aiohttp
-from livekit.protocol import room as proto_room
-from livekit.protocol import models as proto_models
+from livekit_fork.protocol import room as proto_room
+from livekit_fork.protocol import models as proto_models
 from ._service import Service
 from .access_token import VideoGrants
 

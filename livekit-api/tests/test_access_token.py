@@ -1,7 +1,7 @@
 import datetime
 
 import pytest  # type: ignore
-from livekit.api import AccessToken, TokenVerifier, VideoGrants, SIPGrants
+from livekit_fork.api import AccessToken, TokenVerifier, VideoGrants, SIPGrants
 
 TEST_API_KEY = "myapikey"
 TEST_API_SECRET = "thiskeyistotallyunsafe"

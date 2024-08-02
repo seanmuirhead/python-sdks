@@ -1,5 +1,5 @@
 import aiohttp
-from livekit.protocol import sip as proto_sip
+from livekit_fork.protocol import sip as proto_sip
 from ._service import Service
 from .access_token import VideoGrants, SIPGrants
 

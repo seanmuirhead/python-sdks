@@ -1,5 +1,5 @@
 from .access_token import TokenVerifier
-from livekit.protocol import webhook as proto_webhook
+from livekit_fork.protocol import webhook as proto_webhook
 from google.protobuf.json_format import Parse
 import hashlib
 import base64

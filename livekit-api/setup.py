@@ -20,12 +20,12 @@ import setuptools  # type: ignore
 
 here = pathlib.Path(__file__).parent.resolve()
 about: Dict[Any, Any] = {}
-with open(os.path.join(here, "livekit", "api", "version.py"), "r") as f:
+with open(os.path.join(here, "livekit_fork", "api", "version.py"), "r") as f:
     exec(f.read(), about)
 
 
 setuptools.setup(
-    name="livekit-api",
+    name="livekit-api-fork",
     version=about["__version__"],
     description="Python Server API for LiveKit",
     long_description=(here / "README.md").read_text(encoding="utf-8"),
@@ -46,14 +46,14 @@ setuptools.setup(
     ],
     keywords=["webrtc", "realtime", "audio", "video", "livekit"],
     license="Apache-2.0",
-    packages=setuptools.find_namespace_packages(include=["livekit.*"]),
+    packages=setuptools.find_namespace_packages(include=["livekit_fork.*"]),
     python_requires=">=3.9.0",
     install_requires=[
         "pyjwt>=2.0.0",
         "aiohttp>=3.9.0",
         "protobuf>=3",
         "types-protobuf>=4,<5",
-        "livekit-protocol>=0.5.1,<2",
+        "livekit-protocol-fork>=0.5.1,<2",
     ],
     package_data={
         "livekit.api": ["py.typed", "*.pyi", "**/*.pyi"],

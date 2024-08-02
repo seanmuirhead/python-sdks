@@ -2,7 +2,7 @@ import base64
 import hashlib
 
 import pytest  # type: ignore
-from livekit.api import AccessToken, TokenVerifier, WebhookReceiver
+from livekit_fork.api import AccessToken, TokenVerifier, WebhookReceiver
 
 TEST_API_KEY = "myapikey"
 TEST_API_SECRET = "thiskeyistotallyunsafe"

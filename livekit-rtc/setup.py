@@ -23,7 +23,7 @@ from wheel.bdist_wheel import get_platform  # type: ignore
 
 here = pathlib.Path(__file__).parent.resolve()
 about: Dict[Any, Any] = {}
-with open(os.path.join(here, "livekit", "rtc", "version.py"), "r") as f:
+with open(os.path.join(here, "livekit_fork", "rtc", "version.py"), "r") as f:
     exec(f.read(), about)
 
 
@@ -34,7 +34,7 @@ class bdist_wheel(_bdist_wheel):
 
 
 setuptools.setup(
-    name="livekit",
+    name="livekit-fork",
     version=about["__version__"],
     description="Python Real-time SDK for LiveKit",
     long_description=(here / "README.md").read_text(encoding="utf-8"),
@@ -56,12 +56,12 @@ setuptools.setup(
     ],
     keywords=["webrtc", "realtime", "audio", "video", "livekit"],
     license="Apache-2.0",
-    packages=setuptools.find_namespace_packages(include=["livekit.*"]),
+    packages=setuptools.find_namespace_packages(include=["livekit_fork.*"]),
     python_requires=">=3.9.0",
     install_requires=["protobuf>=3", "types-protobuf>=3"],
     package_data={
-        "livekit.rtc": ["_proto/*.py", "py.typed", "*.pyi", "**/*.pyi"],
-        "livekit.rtc.resources": ["*.so", "*.dylib", "*.dll", "LICENSE.md", "*.h"],
+        "livekit_fork.rtc": ["_proto/*.py", "py.typed", "*.pyi", "**/*.pyi"],
+        "livekit_fork.rtc.resources": ["*.so", "*.dylib", "*.dll", "LICENSE.md", "*.h"],
     },
     project_urls={
         "Documentation": "https://docs.livekit.io",

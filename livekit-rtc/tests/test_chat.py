@@ -1,7 +1,7 @@
 from datetime import datetime
 import json
 
-from livekit.rtc import ChatMessage
+from livekit_fork.rtc import ChatMessage
 
 
 def test_message_basics():
